@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Games | EsportsBet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Oxanium', sans-serif;
+            background: #0f172a;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .countdown {
+            font-feature-settings: "tnum";
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white p-4 shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-gamepad text-2xl text-blue-400"></i>
+                <span class="text-xl font-bold">EsportsBet</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="games.html" class="text-blue-400 font-medium">Games</a>
+                <a href="#" class="hover:text-blue-400">Leaderboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <i class="fas fa-bell text-xl text-gray-400 hover:text-white cursor-pointer"></i>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+                </div>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Search and Filter -->
+        <div class="mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+                <h1 class="text-3xl font-bold">Available Matches</h1>
+                <div class="relative w-full md:w-64">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <input type="text" class="w-full bg-gray-800 text-white border border-gray-700 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search games...">
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">All</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">CS:GO</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">Dota 2</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">LoL</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">Valorant</button>
+                <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">Overwatch</button>
+            </div>
+        </div>
+
+        <!-- Games Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Game Card 1 -->
+            <div class="game-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 transition-all duration-300">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/7775641/pexels-photo-7775641.jpeg" alt="CS:GO Tournament" class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">LIVE</div>
+                    <div class="absolute bottom-2 right-2 bg-gray-900 bg-opacity-80 text-white text-sm px-2 py-1 rounded">
+                        <i class="fas fa-users mr-1"></i> 12,345 betting
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">ESL Pro League Season 18</h3>
+                        <span class="bg-gray-700 text-blue-400 text-xs px-2 py-1 rounded">CS:GO</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Starts in: <span class="countdown font-mono text-white">02:45:18</span></span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/40x40" alt="Team 1" class="w-10 h-10 mx-auto rounded-full mb-1">
+                            <span class="text-sm">Natus Vincere</span>
+                        </div>
+                        <div class="text-xl font-bold mx-4">VS</div>
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/40x40" alt="Team 2" class="w-10 h-10 mx-auto rounded-full mb-1">
+                            <span class="text-sm">Team Vitality</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-3 mb-4">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Prize Pool:</span>
+                            <span class="font-bold">$850,000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Best Odds:</span>
+                            <span class="font-bold text-green-400">+250</span>
+                        </div>
+                    </div>
+                    <a href="bet.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded-lg">
+                        Place Bet
+                    </a>
+                </div>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="game-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 transition-all duration-300">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" alt="Dota 2 Tournament" class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">UPCOMING</div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">The International 2023</h3>
+                        <span class="bg-gray-700 text-red-400 text-xs px-2 py-1 rounded">Dota 2</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Starts in: <span class="countdown font-mono text-white">1d 04:22:10</span></span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/40x40" alt="Team 1" class="w-10 h-10 mx-auto rounded-full mb-1">
+                            <span class="text-sm">Team Spirit</span>
+                        </div>
+                        <div class="text-xl font-bold mx-4">VS</div>
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/40x40" alt="Team 2" class="w-10 h-10 mx-auto rounded-full mb-1">
+                            <span class="text-sm">PSG.LGD</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-3 mb-4">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Prize Pool:</span>
+                            <span class="font-bold">$3,000,000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Best Odds:</span>
+                            <span class="font-bold text-green-400">+180</span>
+                        </div>
+                    </div>
+                    <a href="bet.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded-lg">
+                        Place Bet
+                    </a>
+                </div>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="game-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700 transition-all duration-300">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg" alt="LoL Tournament" class="w-full h-48 object-cover">
+                    <div class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">UPCOMING</div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">World Championship 2023</h3>
+                        <span class="bg-gray-700 text-purple-400 text-xs px-2 py-1 rounded">League of Legends</span>
+                    </div>
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Starts in: <span class="countdown font-mono text-white">3d 12:15:45</span></span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/40x40" alt="Team 1" class="w-10 h-10 mx-auto rounded-full mb-1">
+                            <span class="text-sm">T1</span>
+                        </div>
+                        <div class="text-xl font-bold mx-4">VS</div>
+                        <div class="text-center">
+                            <img src="https://via.placeholder.com/40x40" alt="Team 2" class="w-10 h-10 mx-auto rounded-full mb-1">
+                            <span class="text-sm">JD Gaming</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-3 mb-4">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Prize Pool:</span>
+                            <span class="font-bold">$2,250,000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Best Odds:</span>
+                            <span class="font-bold text-green-400">+320</span>
+                        </div>
+                    </div>
+                    <a href="bet.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded-lg">
+                        Place Bet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-gamepad text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold text-white">EsportsBet</span>
+                    </div>
+                    <p class="mt-2">© 2023 All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-discord text-xl"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timers
+        function updateCountdowns() {
+            const countdowns = document.querySelectorAll('.countdown');
+            
+            countdowns.forEach(countdown => {
+                const timeString = countdown.textContent;
+                let seconds = 0;
+                
+                if (timeString.includes('d')) {
+                    // Format: Xd XX:XX:XX
+                    const parts = timeString.split(' ');
+                    const days = parseInt(parts[0]);
+                    const [hours, mins, secs] = parts[1].split(':').map(Number);
+                    seconds = days * 86400 + hours * 3600 + mins * 60 + secs;
+                } else {
+                    // Format: XX:XX:XX
+                    const [hours, mins, secs] = timeString.split(':').map(Number);
+                    seconds = hours * 3600 + mins * 60 + secs;
+                }
+                
+                // Decrement and format
+                seconds--;
+                if (seconds < 0) seconds = 0;
+                
+                if (seconds >= 86400) {
+                    const days = Math.floor(seconds / 86400);
+                    const remaining = seconds % 86400;
+                    const hrs = Math.floor(remaining / 3600).toString().padStart(2, '0');
+                    const mins = Math.floor((remaining % 3600) / 60).toString().padStart(2, '0');
+                    const secs = (remaining % 60).toString().padStart(2, '0');
+                    countdown.textContent = `${days}d ${hrs}:${mins}:${secs}`;
+                } else {
+                    const hrs = Math.floor(seconds / 3600).toString().padStart(2, '0');
+                    const mins = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+                    const secs = (seconds % 60).toString().padStart(2, '0');
+                    countdown.textContent = `${hrs}:${mins}:${secs}`;
+                }
+            });
+        }
+        
+        // Update countdowns every second
+        setInterval(updateCountdowns, 1000);
+    </script>
+</body>
+</html>
