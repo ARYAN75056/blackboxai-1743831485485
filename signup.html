@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | EsportsBet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Oxanium', sans-serif;
+            background: #0f172a;
+        }
+        .auth-container {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .password-strength {
+            height: 4px;
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+    <!-- Navigation -->
+    <nav class="absolute top-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-gamepad text-2xl text-blue-400"></i>
+                <span class="text-xl font-bold">EsportsBet</span>
+            </div>
+            <div>
+                <a href="index.html" class="text-gray-300 hover:text-white">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <div class="auth-container max-w-md w-full p-8 rounded-lg shadow-2xl border border-gray-700">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-white mb-2">Create Account</h1>
+            <p class="text-gray-400">Join our betting community today</p>
+        </div>
+
+        <form>
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label class="block text-gray-300 text-sm font-bold mb-2" for="firstName">
+                        First Name
+                    </label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                               id="firstName" type="text" placeholder="John" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-300 text-sm font-bold mb-2" for="lastName">
+                        Last Name
+                    </label>
+                    <input class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="lastName" type="text" placeholder="Doe" required>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-300 text-sm font-bold mb-2" for="email">
+                    Email
+                </label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="email" type="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-300 text-sm font-bold mb-2" for="password">
+                    Password
+                </label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="password" type="password" placeholder="••••••••" required>
+                    <button type="button" class="absolute right-3 top-3 text-gray-400 hover:text-white" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="mt-2">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-xs text-gray-400">Password Strength</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-1">
+                        <div id="passwordStrength" class="password-strength bg-red-500 rounded-full h-1 w-0"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-300 text-sm font-bold mb-2" for="confirmPassword">
+                    Confirm Password
+                </label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="confirmPassword" type="password" placeholder="••••••••" required>
+                </div>
+                <p id="passwordMatch" class="text-xs mt-1 hidden text-red-400">Passwords do not match</p>
+            </div>
+
+            <div class="mb-6 flex items-center">
+                <input id="terms" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500" required>
+                <label for="terms" class="ml-2 text-sm text-gray-300">
+                    I agree to the <a href="#" class="text-blue-400 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a>
+                </label>
+            </div>
+
+            <div class="mb-6">
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="button">
+                    Create Account
+                </button>
+            </div>
+
+            <div class="text-center text-gray-400">
+                <p>Already have an account? <a href="login.html" class="text-blue-400 hover:underline">Log in</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Password visibility toggle
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const password = document.getElementById('password');
+            const icon = this.querySelector('i');
+            if (password.type === 'password') {
+                password.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                password.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        });
+
+        // Password strength indicator
+        document.getElementById('password').addEventListener('input', function() {
+            const strengthBar = document.getElementById('passwordStrength');
+            const strength = calculatePasswordStrength(this.value);
+            
+            if (strength < 3) {
+                strengthBar.className = 'password-strength bg-red-500 rounded-full h-1';
+                strengthBar.style.width = (strength * 33) + '%';
+            } else if (strength < 5) {
+                strengthBar.className = 'password-strength bg-yellow-500 rounded-full h-1';
+                strengthBar.style.width = (strength * 20) + '%';
+            } else {
+                strengthBar.className = 'password-strength bg-green-500 rounded-full h-1';
+                strengthBar.style.width = '100%';
+            }
+        });
+
+        // Password match validation
+        document.getElementById('confirmPassword').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const matchText = document.getElementById('passwordMatch');
+            
+            if (this.value && this.value !== password) {
+                matchText.classList.remove('hidden');
+            } else {
+                matchText.classList.add('hidden');
+            }
+        });
+
+        function calculatePasswordStrength(password) {
+            let strength = 0;
+            
+            // Length check
+            if (password.length > 7) strength++;
+            if (password.length > 11) strength++;
+            
+            // Character variety
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            return strength;
+        }
+    </script>
+</body>
+</html>
